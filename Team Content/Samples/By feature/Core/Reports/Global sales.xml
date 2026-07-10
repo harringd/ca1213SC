@@ -1,14 +1,28 @@
 <report xmlns="http://developer.cognos.com/schemas/report/17.6/" expressionLocale="en-us" useStyleVersion="latest">
+      
+  
   <!--RSU-SPC-0093 The report specification was upgraded from "http://developer.cognos.com/schemas/report/16.2/" to "http://developer.cognos.com/schemas/report/17.3/" at 2025-3-7. 13:26:59-->
+      
+  
   <!--RSU-SPC-0093 The report specification was upgraded from "http://developer.cognos.com/schemas/report/15.6/" to "http://developer.cognos.com/schemas/report/16.0/" at 2021-7-5. 10:16:5-->
+      
+  
   <!--RSU-SPC-0093 The report specification was upgraded from "http://developer.cognos.com/schemas/report/14.2/" to "http://developer.cognos.com/schemas/report/15.0/" at 2018-7-10. 7:45:27-->
+      
+  
   <!--RSU-SPC-0093 The report specification was upgraded from "http://developer.cognos.com/schemas/report/14.0/" to "http://developer.cognos.com/schemas/report/14.1/" at 2017-4-27. 11:11:29-->
+      
+  
   <!--RSU-SPC-0093 The report specification was upgraded from "http://developer.cognos.com/schemas/report/13.3/" to "http://developer.cognos.com/schemas/report/14.0/" at 2017-1-26. 15:28:50-->
-  				
+      				
 				
+  
+  
   <drillBehavior/>
-  				
+      				
 				
+  
+  
   <layouts>
     <layout>
       <reportPages>
@@ -35,6 +49,18 @@
                 <tableRows>
                   <tableRow>
                     <tableCells>
+                      <tableCell>
+                        <contents>
+                          <textItem>
+                            <dataSource>
+                              <staticValue>Dean Samples</staticValue>
+                            </dataSource>
+                          </textItem>
+                        </contents>
+                        <style>
+                          <CSS value="vertical-align:top;width:33%;text-align:left"/>
+                        </style>
+                      </tableCell>
                       <tableCell colSpan="2">
                         <contents>
                           <table>
@@ -223,9 +249,10 @@
                           </table>
                         </contents>
                         <style>
-                          <CSS value="padding:10px 60px 10px 60px;vertical-align:top"/>
+                          <CSS value="padding:10px 60px 10px 60px;vertical-align:top;width:67%"/>
                           <defaultStyles>
                             <defaultStyle refStyle="GuidedLayoutBottomPadding"/>
+                            <defaultStyle refStyle="GuidedLayoutLeftPadding"/>
                           </defaultStyles>
                         </style>
                       </tableCell>
@@ -233,7 +260,7 @@
                   </tableRow>
                   <tableRow>
                     <tableCells>
-                      <tableCell colSpan="2">
+                      <tableCell colSpan="3">
                         <contents>
                           <table>
                             <style>
@@ -272,7 +299,7 @@
                   </tableRow>
                   <tableRow>
                     <tableCells>
-                      <tableCell colSpan="2">
+                      <tableCell colSpan="3">
                         <contents>
                           <block name="FilterPanel">
                             <contents>
@@ -439,7 +466,7 @@
                   </tableRow>
                   <tableRow>
                     <tableCells>
-                      <tableCell colSpan="2">
+                      <tableCell colSpan="3">
                         <contents>
                           <customControl path="/bi/samples/js/FilterPanel/HideShowFilterPanel.js">
                             <configuration>{
@@ -464,7 +491,7 @@
                   </tableRow>
                   <tableRow>
                     <tableCells>
-                      <tableCell colSpan="2">
+                      <tableCell colSpan="3">
                         <contents>
                           <table>
                             <style>
@@ -540,7 +567,6 @@
                                       <defaultStyles>
                                         <defaultStyle refStyle="ContentDataContainerTableCell"/>
                                         <defaultStyle refStyle="GuidedLayoutTopPadding"/>
-                                        <defaultStyle refStyle="GuidedLayoutRightPadding"/>
                                       </defaultStyles>
                                     </style>
                                   </tableCell>
@@ -562,7 +588,7 @@
                   </tableRow>
                   <tableRow>
                     <tableCells>
-                      <tableCell colSpan="2">
+                      <tableCell colSpan="3">
                         <contents>
                           <table>
                             <style>
@@ -651,7 +677,7 @@
                   </tableRow>
                   <tableRow>
                     <tableCells>
-                      <tableCell colSpan="2">
+                      <tableCell colSpan="3">
                         <contents>
                           <table>
                             <style>
@@ -1365,13 +1391,17 @@
       </reportPages>
     </layout>
   </layouts>
-  			
+      			
+  
+  
   <XMLAttributes>
     <XMLAttribute name="RS_CreateExtendedDataItems" output="no" value="true"/>
     <XMLAttribute name="listSeparator" output="no" value=","/>
     <XMLAttribute name="decimalSeparator" output="no" value="."/>
     <XMLAttribute name="RS_modelModificationTime" output="no" value="2026-04-27T08:00:37.827Z"/>
   </XMLAttributes>
+      
+  
   <reportStylesRef inclusion="runTime">
     <reportPath path="/content/folder[@name='Templates']/folder[@name='Style Reference Reports']/report[@name='Blue']">
       <XMLAttributes>
@@ -1379,8 +1409,14 @@
       </XMLAttributes>
     </reportPath>
   </reportStylesRef>
+      
+  
   <modelPath type="module">/content/folder[@name='Samples']/folder[@name='By feature']/folder[@name='Core']/folder[@name='Data']/module[@name='Sample data module']</modelPath>
+      
+  
   <reportName>Global sales</reportName>
+      
+  
   <queries>
     <query name="Query_year">
       <source>
@@ -1597,6 +1633,8 @@
       </detailFilters>
     </query>
   </queries>
+      
+  
   <namedConditionalStyles>
     <rangeConditionalStyle name="Conditional Style 1" type="number">
       <conditionalDataItem refDataItem="Revenue" refQuery="List_query"/>
@@ -1611,6 +1649,8 @@
       <styleDefault/>
     </rangeConditionalStyle>
   </namedConditionalStyles>
+      
+  
   <reportDataStores>
     <reportDataStore name="dataStore">
       <dsSource>
@@ -1636,6 +1676,8 @@
       </dsSource>
     </reportDataStore>
   </reportDataStores>
+      
+  
   <classStyles>
     <classStyle name="GuidedLayoutLeftPadding">
       <CSS value="padding-left:5px;border-top-width:1px;border-bottom-width:1px;border-left-width:1px;border-right-width:1px"/>
@@ -1653,4 +1695,6 @@
       <CSS value="margin-bottom:10px"/>
     </classStyle>
   </classStyles>
+    
+
 </report>
